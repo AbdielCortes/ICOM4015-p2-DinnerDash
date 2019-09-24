@@ -26,7 +26,7 @@ public class Client extends BaseDynamicEntity {
         ((Burger) order.food).addIngredient(Item.burger);
         order.value += 1.0;
         for(int i = 0;i<numOfIngredients;i++){
-            int ingredients = new Random().nextInt(4)+1;
+            int ingredients = new Random().nextInt(5)+1;
             order.value += 0.5;
             switch (ingredients){
                 case 1:
@@ -42,7 +42,11 @@ public class Client extends BaseDynamicEntity {
                     ((Burger) order.food).addIngredient(Item.cheese);
 
                     break;
-
+                    
+                case 4:
+                	((Burger) order.food).addIngredient(Item.onion);
+                	
+                	break;
             }
 
         }

@@ -38,8 +38,8 @@ public class Images {
         Options = new BufferedImage[2];
         kitchenChairTable = new BufferedImage[3];
         people = new BufferedImage[9];
-        kitchenCounter = new BufferedImage[8];
-        ingredients = new BufferedImage[7];
+        kitchenCounter = new BufferedImage[9];
+        ingredients = new BufferedImage[8];
         chef = new BufferedImage[4];
         try {
 
@@ -79,6 +79,7 @@ public class Images {
             kitchenCounter[5] = kitchenCounterSpriteSheet.crop(64,73,32,46);//cheese
             kitchenCounter[6] = kitchenCounterSpriteSheet.crop(0,133,32,50);//plates
             kitchenCounter[7] = kitchenCounterSpriteSheet.crop(0,63,34,56);//buns
+            kitchenCounter[8] = kitchenCounterSpriteSheet.crop(32, 203, 34, 44); //onion counter
 
             ingredients[0] = burgerSpriteSheet.crop(25, 16, 112, 43); // top bun
             ingredients[1] = burgerSpriteSheet.crop(30, 134, 103, 48); // patty
@@ -87,6 +88,7 @@ public class Images {
             ingredients[4] = burgerSpriteSheet.crop(161, 62, 117, 34); // lettuce
             ingredients[5] = burgerSpriteSheet.crop(444, 270, 115, 39); // bottom bun
             ingredients[6] = burgerSpriteSheet.crop(575, 263, 131, 51); // plate
+            ingredients[7] = burgerSpriteSheet.crop(307, 154, 131, 44); //onion
 
             chef[0] = chefSpriteSheet.crop(30,3,66,120);
             chef[1] = chefSpriteSheet.crop(159,3,66,120);

@@ -20,7 +20,8 @@ public class GameState extends State {
                 new CheeseCounter(BaseCounter.DEFAULTCOUNTERWIDTH,593,handler),
                 new StoveCounter(BaseCounter.DEFAULTCOUNTERWIDTH*2,600,handler),
                 new LettuceCounter(BaseCounter.DEFAULTCOUNTERWIDTH*3,600,handler),
-                new EmptyCounter(BaseCounter.DEFAULTCOUNTERWIDTH*4,600,handler),
+                //new EmptyCounter(BaseCounter.DEFAULTCOUNTERWIDTH*4,600,handler),
+                new OnionCounter(BaseCounter.DEFAULTCOUNTERWIDTH*4,597,handler),
                 new TomatoCounter(BaseCounter.DEFAULTCOUNTERWIDTH*5, 590, handler),
                 new BreadCounter(BaseCounter.DEFAULTCOUNTERWIDTH*6, 568, handler),
                 new TopBreadCounter(BaseCounter.DEFAULTCOUNTERWIDTH*7, 568, handler)};

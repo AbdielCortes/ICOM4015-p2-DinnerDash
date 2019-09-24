@@ -50,7 +50,7 @@ public class Player extends BaseDynamicEntity {
         }
         if(handler.getKeyManager().fattbut){
             for(BaseCounter counter: handler.getWorld().Counters){
-                if (counter instanceof EmptyCounter && counter.isInteractable()){
+                if (counter instanceof PlateCounter && counter.isInteractable()){
                     createBurger();
                 }
             }
