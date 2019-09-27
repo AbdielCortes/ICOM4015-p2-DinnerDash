@@ -66,6 +66,7 @@ public class Restaurant_1 extends BaseWorld {
         g.drawImage(Images.kitchenChairTable[0],handler.getWidth()/3,90,96,96,null);
         g.drawImage(Images.kitchenChairTable[1],handler.getWidth()/3+96,140,52,52,null);
         g.drawImage(Images.kitchenChairTable[1],handler.getWidth()/3-52,140,52,52,null);
+        
 
         g.drawImage(Images.kitchenChairTable[0],handler.getWidth()/3+handler.getWidth()/6,190,96,96,null);
         g.drawImage(Images.kitchenChairTable[2],handler.getWidth()/3+handler.getWidth()/6+96,240,52,52,null);

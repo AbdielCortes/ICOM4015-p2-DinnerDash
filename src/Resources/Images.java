@@ -30,6 +30,8 @@ public class Images {
     public static SpriteSheet kitchenCounterSpriteSheet;
     public static SpriteSheet burgerSpriteSheet;
     public static SpriteSheet chefSpriteSheet;
+    
+    
     public Images() {
 
         butstart = new BufferedImage[3];
@@ -52,7 +54,7 @@ public class Images {
             title = ImageIO.read(getClass().getResourceAsStream("/Sheets/title.jpg"));
             Pause = ImageIO.read(getClass().getResourceAsStream("/Sheets/Pause.png"));
             welcome = ImageIO.read(getClass().getResourceAsStream("/Sheets/Welcome.png"));
-            floor = ImageIO.read(getClass().getResourceAsStream("/Sheets/floor.jpg"));
+            floor = ImageIO.read(getClass().getResourceAsStream("/Sheets/GreenFloor.png"));
             butstart[0]= ImageIO.read(getClass().getResourceAsStream("/Buttons/NormBut.png"));//normbut
             butstart[1]= ImageIO.read(getClass().getResourceAsStream("/Buttons/HoverBut.png"));//hoverbut
             butstart[2]= ImageIO.read(getClass().getResourceAsStream("/Buttons/ClickedBut.png"));//clickbut
