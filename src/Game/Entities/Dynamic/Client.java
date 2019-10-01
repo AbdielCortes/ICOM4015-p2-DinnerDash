@@ -20,8 +20,6 @@ public class Client extends BaseDynamicEntity {
         
         patience = new Random().nextInt(120*60)+60*60;
         OGpatience = patience;
-//        setPatience(new Random().nextInt(120*60)+60*60);
-//        OGpatience = getPatience();
         
         int numOfIngredients = new Random().nextInt(4)+1;
         order = new Order();
@@ -59,10 +57,6 @@ public class Client extends BaseDynamicEntity {
     }
 
     public void tick(){
-//        patience--;
-//        if(patience<=0){
-//            isLeaving=true;
-//        }
       patience--;
       if(patience<=0){
           isLeaving=true;

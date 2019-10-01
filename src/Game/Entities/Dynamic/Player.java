@@ -1,6 +1,7 @@
 package Game.Entities.Dynamic;
 
 import Game.Entities.Static.*;
+import Game.GameStates.State;
 import Main.Handler;
 import Resources.Animation;
 import Resources.Images;
@@ -62,6 +63,11 @@ public class Player extends BaseDynamicEntity {
                 }
             }
         }
+        
+        if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_ESCAPE)) {
+        	State.setState(handler.getGame().pauseState);
+        }
+        
     }
 
     private void ringCustomer() {
