@@ -2,6 +2,7 @@ package Game.GameStates;
 
 import Main.Handler;
 import Resources.Images;
+import Display.UI.ClickListlener;
 import Display.UI.UIImageButton;
 import Display.UI.UIManager;
 
@@ -20,24 +21,29 @@ public class PauseState extends State {
         uiManager = new UIManager(handler);
         handler.getMouseManager().setUimanager(uiManager);
 
-        uiManager.addObjects(new UIImageButton(56, 223, 128, 64, Images.Resume, () -> {
+        uiManager.addObjects(new UIImageButton(64, 250, 186, 66, Images.Resume, () -> {
             handler.getMouseManager().setUimanager(null);
             State.setState(handler.getGame().gameState);
         }));
+        
+        uiManager.addObjects(new UIImageButton(64, 250+(66+32), 186, 66, Images.Restart, new ClickListlener() {
+            @Override
+            public void onClick() {
+                handler.getMouseManager().setUimanager(null);
+                handler.getGame().reStart();
+                State.setState(handler.getGame().gameState);
+            }
+        }));
 
-        uiManager.addObjects(new UIImageButton(56, 223+(64+16), 128, 64, Images.Options, () -> {
+//        uiManager.addObjects(new UIImageButton(56, 223+(64+16), 128, 64, Images.Options, () -> {
+//            handler.getMouseManager().setUimanager(null);
+//            State.setState(handler.getGame().menuState);
+//        }));
+
+        uiManager.addObjects(new UIImageButton(64, (250+(66+32))+(66+32), 186, 66, Images.BTitle, () -> {
             handler.getMouseManager().setUimanager(null);
             State.setState(handler.getGame().menuState);
         }));
-
-        uiManager.addObjects(new UIImageButton(56, (223+(64+16))+(64+16), 128, 64, Images.BTitle, () -> {
-            handler.getMouseManager().setUimanager(null);
-            State.setState(handler.getGame().menuState);
-        }));
-
-
-
-
 
     }
 

@@ -24,7 +24,7 @@ public class Images {
     public static BufferedImage[] kitchenCounter;
     public static BufferedImage[] ingredients;
     public static BufferedImage[] BTitle;
-    public static BufferedImage[] Options;
+    public static BufferedImage[] Restart;
     public static ImageIcon icon;
     public static SpriteSheet kitchenSpriteSheet;
     public static SpriteSheet kitchenCounterSpriteSheet;
@@ -35,9 +35,9 @@ public class Images {
     public Images() {
 
         butstart = new BufferedImage[3];
-        Resume = new BufferedImage[2];
-        BTitle = new BufferedImage[2];
-        Options = new BufferedImage[2];
+        Resume = new BufferedImage[3];
+        BTitle = new BufferedImage[3];
+        Restart = new BufferedImage[3];
         kitchenChairTable = new BufferedImage[3];
         people = new BufferedImage[9];
         kitchenCounter = new BufferedImage[9];
@@ -51,14 +51,27 @@ public class Images {
             chefSpriteSheet = new SpriteSheet(ImageIO.read(getClass().getResourceAsStream("/Sheets/chef.png")));
 
 
-            title = ImageIO.read(getClass().getResourceAsStream("/Sheets/title.jpg"));
+            title = ImageIO.read(getClass().getResourceAsStream("/Sheets/KrustyKrabBackground.png"));
             Pause = ImageIO.read(getClass().getResourceAsStream("/Sheets/Pause.png"));
             welcome = ImageIO.read(getClass().getResourceAsStream("/Sheets/Welcome.png"));
             floor = ImageIO.read(getClass().getResourceAsStream("/Sheets/GreenFloor.png"));
-            butstart[0]= ImageIO.read(getClass().getResourceAsStream("/Buttons/NormBut.png"));//normbut
-            butstart[1]= ImageIO.read(getClass().getResourceAsStream("/Buttons/HoverBut.png"));//hoverbut
-            butstart[2]= ImageIO.read(getClass().getResourceAsStream("/Buttons/ClickedBut.png"));//clickbut
+            
+            butstart[0]= ImageIO.read(getClass().getResourceAsStream("/Buttons/NormalButtonStart.png"));//normbut
+            butstart[1]= ImageIO.read(getClass().getResourceAsStream("/Buttons/HoverButtonStart.png"));//hoverbut
+            butstart[2]= ImageIO.read(getClass().getResourceAsStream("/Buttons/ClickedButtonStart.png"));//clickbut
+            
+            Resume[0]= ImageIO.read(getClass().getResourceAsStream("/Buttons/NormalButtonResume.png"));//normbut
+            Resume[1]= ImageIO.read(getClass().getResourceAsStream("/Buttons/HoverButtonResume.png"));//hoverbut
+            Resume[2]= ImageIO.read(getClass().getResourceAsStream("/Buttons/ClickedButtonResume.png"));//clickbut
+            
+            BTitle[0]= ImageIO.read(getClass().getResourceAsStream("/Buttons/NormalButtonTitle.png"));//normbut
+            BTitle[1]= ImageIO.read(getClass().getResourceAsStream("/Buttons/HoverButtonTitle.png"));//hoverbut
+            BTitle[2]= ImageIO.read(getClass().getResourceAsStream("/Buttons/ClickedButtonTitle.png"));//clickbut
 
+            Restart[0]= ImageIO.read(getClass().getResourceAsStream("/Buttons/NormalButtonRestart.png"));//normbut
+            Restart[1]= ImageIO.read(getClass().getResourceAsStream("/Buttons/HoverButtonRestart.png"));//hoverbut
+            Restart[2]= ImageIO.read(getClass().getResourceAsStream("/Buttons/ClickedButtonRestart.png"));//clickbut
+            
             kitchenChairTable[0] = kitchenSpriteSheet.crop(21,27,62,54);
             kitchenChairTable[1] = kitchenSpriteSheet.crop(108,14,30,35);
             kitchenChairTable[2] = kitchenSpriteSheet.crop(108,52,30,35);
@@ -97,7 +110,7 @@ public class Images {
             chef[2] = chefSpriteSheet.crop(287,3,67,120);
             chef[3] = chefSpriteSheet.crop(31,129,66,120);
 
-            icon =  new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Sheets/icon.png")));
+            icon =  new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Sheets/KrustyKrabHat.png")));
 
 
         }catch (IOException e) {
