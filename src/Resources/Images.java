@@ -41,7 +41,7 @@ public class Images {
         BTitle = new BufferedImage[3];
         Restart = new BufferedImage[3];
         kitchenChairTable = new BufferedImage[3];
-        people = new BufferedImage[9];
+        people = new BufferedImage[11];
         kitchenCounter = new BufferedImage[9];
         ingredients = new BufferedImage[8];
         chef = new BufferedImage[4];
@@ -89,7 +89,7 @@ public class Images {
             people[6] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Programmer2Male.png"));
             people[7] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Songwriter3Male.png"));
             people[8] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Weather_Reporter2Female.png"));
-            people[9] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/MrKrabs.gif")); //inspector
+            people[9] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/MrKrabs.png")); //inspector
             people[10] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Squidward.png")); //inspector
 
             kitchenCounter[0] = kitchenCounterSpriteSheet.crop(224,12,32,43);//stoveTop

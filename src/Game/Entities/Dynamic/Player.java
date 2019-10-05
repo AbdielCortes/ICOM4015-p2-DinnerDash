@@ -32,7 +32,7 @@ public class Player extends BaseDynamicEntity {
 	public int clientsLeft = 0;
 	Item item;
 	float money;
-	int speed = 4;
+	int speed = 6;
 	private Burger burger;
 	private String direction = "right";
 	private int interactionCounter = 0;
@@ -344,15 +344,15 @@ public class Player extends BaseDynamicEntity {
 			}
 
 			if(bonus) cookBonus = (float) (client.order.value * 0.12);
-			System.out.println(cookBonus);
+			//System.out.println(cookBonus);
 			money+=client.order.value + cookBonus;
-			System.out.println(money);
+			//System.out.println(money);
 			if(Client.getPatience() > (Client.getOGpatience()/2)) {
 				money *= 1.15;
 			}
 			handler.getWorld().clients.remove(client);
 			handler.getPlayer().createBurger();
-			System.out.println("Total money earned is: " + String.valueOf(money));
+			//System.out.println("Total money earned is: " + String.valueOf(money));
 			return;
 
 		} 
@@ -372,7 +372,8 @@ public class Player extends BaseDynamicEntity {
 		g.fillRect(handler.getWidth()/2 -210, 3, 320, 32);;
 		g.setColor(Color.yellow);
 		g.setFont(new Font("ComicSans", Font.BOLD, 32));
-		g.drawString("Money Earned: " + money, handler.getWidth()/2 -200, 30);
+		String moneyFormated = String.format("%.2f", money);
+		g.drawString("Money Earned: " + moneyFormated, handler.getWidth()/2 -200, 30);
 	}
 
 	public void interact(){
