@@ -16,7 +16,7 @@ public class Client extends BaseDynamicEntity {
 	Order order;
 	public boolean isLeaving = false;
 	public Client(int xPos, int yPos, Handler handler) {
-		super(Images.people[new Random().nextInt(9)], xPos, yPos,64,72, handler);
+		super(Images.people[new Random().nextInt(11)], xPos, yPos,64,72, handler);
 
 		patience = new Random().nextInt(120*60)+60*60;
 		OGpatience = patience;
