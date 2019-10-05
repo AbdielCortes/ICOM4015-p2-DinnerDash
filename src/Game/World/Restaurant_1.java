@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public class Restaurant_1 extends BaseWorld {
     private int count=0;
     private int capacity = 5;
+    public static int leftClients = 0;
     public Restaurant_1(BaseCounter[] Counters, Handler handler) {
         super(Images.floor,Counters, handler, new Player(null,0,650,handler));
 
@@ -39,6 +40,7 @@ public class Restaurant_1 extends BaseWorld {
                 }
             }
             if(left){
+            	leftClients++;
                 this.clients.remove(toLeave);
                 for (Client client : toMove) {
                     client.move();
@@ -92,5 +94,12 @@ public class Restaurant_1 extends BaseWorld {
             counter.render(g);
         }
         handler.getPlayer().render(g);
+    }
+    
+    public static int getLeftClients() {
+    	return leftClients;
+    }
+    public static void setLeftClients(int lClients) {
+    	leftClients = lClients;
     }
 }

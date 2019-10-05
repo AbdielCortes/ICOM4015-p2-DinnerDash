@@ -14,6 +14,7 @@ import java.awt.image.BufferedImage;
 public class Player extends BaseDynamicEntity {
     Item item;
     float money;
+    public static int servedCustomers = 0;
     int speed = 5;
     private Burger burger;
     private String direction = "right";
@@ -68,6 +69,9 @@ public class Player extends BaseDynamicEntity {
         	State.setState(handler.getGame().pauseState);
         }
         
+        if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_W)) {
+        	State.setState(handler.getGame().winState);
+        }
     }
 
     private void ringCustomer() {
@@ -76,13 +80,14 @@ public class Player extends BaseDynamicEntity {
             boolean matched = ((Burger)client.order.food).equals(handler.getCurrentBurger());
             if(matched){
                 money+=client.order.value;
-                System.out.println(money);
+                //System.out.println(money);
                 if(Client.getPatience() > (Client.getOGpatience()/2)) {
                 	money *= 1.15;
                 }
                 handler.getWorld().clients.remove(client);
                 handler.getPlayer().createBurger();
-                System.out.println("Total money earned is: " + String.valueOf(money));
+                //System.out.println("Total money earned is: " + String.valueOf(money));
+                servedCustomers++;
                 return;
             }
 
@@ -102,7 +107,8 @@ public class Player extends BaseDynamicEntity {
         g.fillRect(handler.getWidth()/2 -210, 3, 320, 32);;
         g.setColor(Color.yellow);
         g.setFont(new Font("ComicSans", Font.BOLD, 32));
-        g.drawString("Money Earned: " + money, handler.getWidth()/2 -200, 30);
+        String moneyFormated = String.format("%.2f", money);
+        g.drawString("Money Earned: " + moneyFormated, handler.getWidth()/2 -200, 30);
     }
 
     public void interact(){
@@ -114,5 +120,12 @@ public class Player extends BaseDynamicEntity {
     }
     public Burger getBurger(){
         return this.burger;
+    }
+    
+    public static int getServedCustomers() {
+    	return servedCustomers;
+    }
+    public static void setServedCustomers(int srvCustomers) {
+    	servedCustomers = srvCustomers;
     }
 }

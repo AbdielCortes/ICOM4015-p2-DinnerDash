@@ -1,10 +1,13 @@
 package Main;
 
 import Display.DisplayScreen;
+import Game.Entities.Dynamic.Player;
 import Game.GameStates.GameState;
 import Game.GameStates.MenuState;
 import Game.GameStates.PauseState;
 import Game.GameStates.State;
+import Game.GameStates.WinState;
+import Game.World.Restaurant_1;
 import Input.KeyManager;
 import Input.MouseManager;
 import Resources.Images;
@@ -43,6 +46,7 @@ public class GameSetUp implements Runnable {
     public State gameState;
     public State menuState;
     public State pauseState;
+    public State winState;
 
     //Res.music
     private MusicHandler musicHandler;
@@ -75,6 +79,7 @@ public class GameSetUp implements Runnable {
         gameState = new GameState(handler);
         menuState = new MenuState(handler);
         pauseState = new PauseState(handler);
+        winState = new WinState(handler);
 
         State.setState(menuState);
         musicHandler.restartBackground();
@@ -82,6 +87,8 @@ public class GameSetUp implements Runnable {
 
     public void reStart(){
         gameState = new GameState(handler);
+        Player.setServedCustomers(0);
+        Restaurant_1.setLeftClients(0);
     }
 
     public synchronized void start(){

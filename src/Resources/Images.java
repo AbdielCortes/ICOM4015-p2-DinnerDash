@@ -52,7 +52,7 @@ public class Images {
 
 
             title = ImageIO.read(getClass().getResourceAsStream("/Sheets/KrustyKrabBackground.png"));
-            Pause = ImageIO.read(getClass().getResourceAsStream("/Sheets/Pause.png"));
+            Pause = ImageIO.read(getClass().getResourceAsStream("/Sheets/PauseScreen.png"));
             welcome = ImageIO.read(getClass().getResourceAsStream("/Sheets/Welcome.png"));
             floor = ImageIO.read(getClass().getResourceAsStream("/Sheets/GreenFloor.png"));
             
