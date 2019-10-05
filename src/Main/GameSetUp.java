@@ -2,6 +2,7 @@ package Main;
 
 import Display.DisplayScreen;
 import Game.GameStates.GameState;
+import Game.GameStates.LoseState;
 import Game.GameStates.MenuState;
 import Game.GameStates.PauseState;
 import Game.GameStates.State;
@@ -42,6 +43,7 @@ public class GameSetUp implements Runnable {
     //States
     public State gameState;
     public State menuState;
+    public State loseState;
     public State pauseState;
 
     //Res.music
@@ -73,6 +75,7 @@ public class GameSetUp implements Runnable {
 
 
         gameState = new GameState(handler);
+        loseState = new LoseState(handler);
         menuState = new MenuState(handler);
         pauseState = new PauseState(handler);
 

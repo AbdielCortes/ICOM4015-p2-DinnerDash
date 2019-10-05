@@ -12,17 +12,24 @@ import java.awt.*;
 /**
  * Created by AlexVR on 7/1/2018.
  */
-public class MenuState extends State {
+public class LoseState extends State {
 
     private UIManager uiManager;
 
-    public MenuState(Handler handler) {
+    public LoseState(Handler handler) {
         super(handler);
         uiManager = new UIManager(handler);
         handler.getMouseManager().setUimanager(uiManager);
 
 
-        uiManager.addObjects(new UIImageButton(handler.getWidth()/2-55, 190, 186, 66, Images.butstart, new ClickListlener() {
+        uiManager.addObjects(new UIImageButton(handler.getWidth()/2+70, 190, 186, 66, Images.BTitle, new ClickListlener() {
+            @Override
+            public void onClick() {
+                State.setState(handler.getGame().menuState);
+            }
+        }));
+        
+        uiManager.addObjects(new UIImageButton(handler.getWidth()/2+70, 290, 186, 66, Images.Restart, new ClickListlener() {
             @Override
             public void onClick() {
                 handler.getMouseManager().setUimanager(null);
@@ -43,7 +50,7 @@ public class MenuState extends State {
     public void render(Graphics g) {
         g.setColor(Color.darkGray);
         g.fillRect(0,0,handler.getWidth(),handler.getHeight());
-        g.drawImage(Images.title,0,0,handler.getWidth(),handler.getHeight(),null);
+        g.drawImage(Images.lose,0,0,handler.getWidth(),handler.getHeight(),null);
         uiManager.Render(g);
 
     }
