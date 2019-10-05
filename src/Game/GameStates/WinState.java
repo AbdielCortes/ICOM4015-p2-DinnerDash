@@ -22,9 +22,10 @@ public class WinState extends State {
     	super(handler);
     	uiManager = new UIManager(handler);
     	handler.getMouseManager().setUimanager(uiManager);
+    	
 
     	//restart button
-    	uiManager.addObjects(new UIImageButton(80, 270, 186, 66, Images.Restart, new ClickListlener() {
+    	uiManager.addObjects(new UIImageButton(80, 270+(66+30), 186, 66, Images.Restart, new ClickListlener() {
     		@Override
             public void onClick() {
                 handler.getMouseManager().setUimanager(null);
@@ -34,7 +35,7 @@ public class WinState extends State {
     	}));
     	
     	//return to title screen button
-    	uiManager.addObjects(new UIImageButton(80, 270+(66+30), 186, 66, Images.BTitle, () -> {
+    	uiManager.addObjects(new UIImageButton(80, 270, 186, 66, Images.BTitle, () -> {
     		handler.getMouseManager().setUimanager(null);
     		State.setState(handler.getGame().menuState);
     	}));

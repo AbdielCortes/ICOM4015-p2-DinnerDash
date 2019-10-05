@@ -21,12 +21,7 @@ public class MenuState extends State {
         uiManager = new UIManager(handler);
         handler.getMouseManager().setUimanager(uiManager);
 
-
-//<<<<<<< HEAD
-//        uiManager.addObjects(new UIImageButton(handler.getWidth()/2+70, 250, 186, 66, Images.butstart, new ClickListlener() {
-//=======
         uiManager.addObjects(new UIImageButton(handler.getWidth()/2-55, 190, 186, 66, Images.butstart, new ClickListlener() {
-//>>>>>>> branch 'master' of https://github.com/uprm-ciic4010-f19/pa-2-dinner-dash-exceptionalfood.git
             @Override
             public void onClick() {
                 handler.getMouseManager().setUimanager(null);
