@@ -26,7 +26,7 @@ public class PauseState extends State {
             State.setState(handler.getGame().gameState);
         }));
         
-        uiManager.addObjects(new UIImageButton(64, 250+(66+32), 186, 66, Images.Restart, new ClickListlener() {
+        uiManager.addObjects(new UIImageButton(64, 250+(66+32)+(66+32), 186, 66, Images.Restart, new ClickListlener() {
             @Override
             public void onClick() {
                 handler.getMouseManager().setUimanager(null);
@@ -40,7 +40,7 @@ public class PauseState extends State {
 //            State.setState(handler.getGame().menuState);
 //        }));
 
-        uiManager.addObjects(new UIImageButton(64, (250+(66+32))+(66+32), 186, 66, Images.BTitle, () -> {
+        uiManager.addObjects(new UIImageButton(64, (250+(66+32)), 186, 66, Images.BTitle, () -> {
             handler.getMouseManager().setUimanager(null);
             State.setState(handler.getGame().menuState);
         }));
@@ -66,7 +66,7 @@ public class PauseState extends State {
 
     @Override
     public void render(Graphics g) {
-        g.drawImage(Images.Pause,0,0,800,810,null);
+        g.drawImage(Images.Pause,0,0,864,810,null);
         uiManager.Render(g);
 
     }

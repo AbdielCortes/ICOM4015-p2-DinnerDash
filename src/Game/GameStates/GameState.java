@@ -21,10 +21,11 @@ public class GameState extends State {
                 new StoveCounter(BaseCounter.DEFAULTCOUNTERWIDTH*2,600,handler),
                 new LettuceCounter(BaseCounter.DEFAULTCOUNTERWIDTH*3,600,handler),
                 //new EmptyCounter(BaseCounter.DEFAULTCOUNTERWIDTH*4,600,handler),
-                new OnionCounter(BaseCounter.DEFAULTCOUNTERWIDTH*4,597,handler),
-                new TomatoCounter(BaseCounter.DEFAULTCOUNTERWIDTH*5, 590, handler),
-                new BreadCounter(BaseCounter.DEFAULTCOUNTERWIDTH*6, 568, handler),
-                new TopBreadCounter(BaseCounter.DEFAULTCOUNTERWIDTH*7, 568, handler)};
+                new SpecialCounter(BaseCounter.DEFAULTCOUNTERWIDTH*4, 600, handler),
+                new OnionCounter(BaseCounter.DEFAULTCOUNTERWIDTH*5,597,handler),
+                new TomatoCounter(BaseCounter.DEFAULTCOUNTERWIDTH*6, 590, handler),
+                new BreadCounter(BaseCounter.DEFAULTCOUNTERWIDTH*7, 568, handler),
+                new TopBreadCounter(BaseCounter.DEFAULTCOUNTERWIDTH*8, 568, handler)};
 
     Restaurant_1 World_1 = new Restaurant_1(Counters,handler);
 

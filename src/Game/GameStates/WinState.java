@@ -50,7 +50,7 @@ public class WinState extends State {
 
     @Override
     public void render(Graphics g) {
-        g.drawImage(Images.win,0,0,800,810,null);
+        g.drawImage(Images.win,0,0,864,810,null);
     	g.setFont(new Font("TimesNewRoman", Font.PLAIN, 30));
         g.setColor(Color.BLACK);     	
     	g.drawString(""+Player.getServedCustomers(), 745, 150);

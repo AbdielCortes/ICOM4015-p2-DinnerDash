@@ -32,7 +32,7 @@ public class Player extends BaseDynamicEntity {
 	public int clientsLeft = 0;
 	Item item;
 	float money;
-	int speed = 7;
+	int speed = 4;
 	private Burger burger;
 	private String direction = "right";
 	private int interactionCounter = 0;
@@ -145,6 +145,7 @@ public class Player extends BaseDynamicEntity {
 			}
 		}        
 	}
+	/*
 	//
 	//<<<<<< HEAD
 	//        } else if(xPos <= 0){
@@ -329,7 +330,7 @@ public class Player extends BaseDynamicEntity {
 	//			}
 	//		}        
 	//	}
-	//
+	//*/
 	private void ringCustomer(int x) {
 
 		Client client = handler.getWorld().clients.get(x-1);
