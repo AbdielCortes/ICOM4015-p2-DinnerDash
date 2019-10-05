@@ -14,6 +14,7 @@ public class Images {
 
     public static BufferedImage[] butstart;
     public static BufferedImage title;
+    public static BufferedImage lose;
     public static BufferedImage floor;
     public static BufferedImage welcome;
     public static BufferedImage Pause;
@@ -52,8 +53,14 @@ public class Images {
             chefSpriteSheet = new SpriteSheet(ImageIO.read(getClass().getResourceAsStream("/Sheets/chef.png")));
 
 
-            title = ImageIO.read(getClass().getResourceAsStream("/Sheets/KrustyKrabBackground.png"));
-            Pause = ImageIO.read(getClass().getResourceAsStream("/Sheets/PauseScreen.png"));
+//<<<<<<< HEAD
+//            title = ImageIO.read(getClass().getResourceAsStream("/Sheets/KrustyKrabBackground.png"));
+//            Pause = ImageIO.read(getClass().getResourceAsStream("/Sheets/PauseScreen.png"));
+//=======
+            title = ImageIO.read(getClass().getResourceAsStream("/Sheets/title.png"));
+            lose = ImageIO.read(getClass().getResourceAsStream("/Sheets/lose.png"));
+            Pause = ImageIO.read(getClass().getResourceAsStream("/Sheets/Pause.png"));
+//>>>>>>> branch 'master' of https://github.com/uprm-ciic4010-f19/pa-2-dinner-dash-exceptionalfood.git
             welcome = ImageIO.read(getClass().getResourceAsStream("/Sheets/Welcome.png"));
             floor = ImageIO.read(getClass().getResourceAsStream("/Sheets/GreenFloor.png"));
             win = ImageIO.read(getClass().getResourceAsStream("/Sheets/WinScreen.png"));
@@ -74,7 +81,7 @@ public class Images {
             Restart[1]= ImageIO.read(getClass().getResourceAsStream("/Buttons/HoverButtonRestart.png"));//hoverbut
             Restart[2]= ImageIO.read(getClass().getResourceAsStream("/Buttons/ClickedButtonRestart.png"));//clickbut
             
-            kitchenChairTable[0] = kitchenSpriteSheet.crop(21,27,62,54);
+            kitchenChairTable[0] = kitchenSpriteSheet.crop(21,26,62,54);
             kitchenChairTable[1] = kitchenSpriteSheet.crop(108,14,30,35);
             kitchenChairTable[2] = kitchenSpriteSheet.crop(108,52,30,35);
 
