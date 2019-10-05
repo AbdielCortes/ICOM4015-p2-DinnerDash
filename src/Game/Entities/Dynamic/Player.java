@@ -69,7 +69,7 @@ public class Player extends BaseDynamicEntity {
         	State.setState(handler.getGame().pauseState);
         }
         
-        if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_W)) {
+        if(money >= 50 || handler.getKeyManager().keyJustPressed(KeyEvent.VK_W)) {
         	State.setState(handler.getGame().winState);
         }
     }

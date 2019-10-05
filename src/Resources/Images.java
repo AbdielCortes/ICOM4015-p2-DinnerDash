@@ -17,6 +17,7 @@ public class Images {
     public static BufferedImage floor;
     public static BufferedImage welcome;
     public static BufferedImage Pause;
+    public static BufferedImage win;
     public static BufferedImage[] Resume;
     public static BufferedImage[] people;
     public static BufferedImage[] chef;
@@ -55,6 +56,7 @@ public class Images {
             Pause = ImageIO.read(getClass().getResourceAsStream("/Sheets/PauseScreen.png"));
             welcome = ImageIO.read(getClass().getResourceAsStream("/Sheets/Welcome.png"));
             floor = ImageIO.read(getClass().getResourceAsStream("/Sheets/GreenFloor.png"));
+            win = ImageIO.read(getClass().getResourceAsStream("/Sheets/WinScreen.png"));
             
             butstart[0]= ImageIO.read(getClass().getResourceAsStream("/Buttons/NormalButtonStart.png"));//normbut
             butstart[1]= ImageIO.read(getClass().getResourceAsStream("/Buttons/HoverButtonStart.png"));//hoverbut

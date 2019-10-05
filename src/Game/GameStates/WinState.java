@@ -24,7 +24,7 @@ public class WinState extends State {
     	handler.getMouseManager().setUimanager(uiManager);
 
     	//restart button
-    	uiManager.addObjects(new UIImageButton(80, 230, 186, 66, Images.Restart, new ClickListlener() {
+    	uiManager.addObjects(new UIImageButton(80, 270, 186, 66, Images.Restart, new ClickListlener() {
     		@Override
             public void onClick() {
                 handler.getMouseManager().setUimanager(null);
@@ -34,7 +34,7 @@ public class WinState extends State {
     	}));
     	
     	//return to title screen button
-    	uiManager.addObjects(new UIImageButton(80, 230+(66+30), 186, 66, Images.BTitle, () -> {
+    	uiManager.addObjects(new UIImageButton(80, 270+(66+30), 186, 66, Images.BTitle, () -> {
     		handler.getMouseManager().setUimanager(null);
     		State.setState(handler.getGame().menuState);
     	}));
@@ -49,11 +49,11 @@ public class WinState extends State {
 
     @Override
     public void render(Graphics g) {
-        g.drawImage(Images.Pause,0,0,800,810,null);
-    	g.setFont(new Font("TimesNewRoman", Font.PLAIN, 20));
+        g.drawImage(Images.win,0,0,800,810,null);
+    	g.setFont(new Font("TimesNewRoman", Font.PLAIN, 30));
         g.setColor(Color.BLACK);     	
-    	g.drawString("Served Customers: "+ Player.getServedCustomers(), 500, 25);
-    	g.drawString("Left Customers: "+ Restaurant_1.getLeftClients(), 500, 50);
+    	g.drawString(""+Player.getServedCustomers(), 745, 150);
+    	g.drawString(""+Restaurant_1.getLeftClients(), 745, 224);
 
     	uiManager.Render(g);
     }
