@@ -55,13 +55,13 @@ public class SpecialCounter extends BaseCounter {
     @Override
     public void render(Graphics g) {
     	if(interactable) {
-    		g.drawImage(Images.tint(Images.kitchenCounter[3], 50, 50, 50),xPos,yPos,width,height,null);
+    		g.drawImage(Images.kitchenCounter[9],xPos,yPos,width,height,null);
     		g.setColor(Color.RED);
     		g.setFont(new Font("ComicSans", Font.ITALIC, 22));
     		g.drawString("MAX PATIENCE",xPos + width/2 - 80,yPos -20);
     	}
         else {
-        	g.drawImage(Images.tint(Images.kitchenCounter[3], 1, 1, 1),xPos,yPos,width,height,null);
+        	g.drawImage(emptyCounter,xPos,yPos,width,height,null);
         }
     }
 

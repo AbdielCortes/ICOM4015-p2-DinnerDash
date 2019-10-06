@@ -21,7 +21,8 @@ public class Images {
     public static BufferedImage win;
     public static BufferedImage[] Resume;
     public static BufferedImage[] people;
-    public static BufferedImage[] chef;
+//    public static BufferedImage[] chef;
+    public static BufferedImage[] spongebob;
     public static BufferedImage[] kitchenChairTable;
     public static BufferedImage[] kitchenCounter;
     public static BufferedImage[] ingredients;
@@ -31,7 +32,8 @@ public class Images {
     public static SpriteSheet kitchenSpriteSheet;
     public static SpriteSheet kitchenCounterSpriteSheet;
     public static SpriteSheet burgerSpriteSheet;
-    public static SpriteSheet chefSpriteSheet;
+//    public static SpriteSheet chefSpriteSheet;
+    public static SpriteSheet spongebobSpriteSheet;
     
     
     public Images() {
@@ -42,15 +44,17 @@ public class Images {
         Restart = new BufferedImage[3];
         kitchenChairTable = new BufferedImage[3];
         people = new BufferedImage[11];
-        kitchenCounter = new BufferedImage[9];
+        kitchenCounter = new BufferedImage[10];
         ingredients = new BufferedImage[8];
-        chef = new BufferedImage[4];
+//        chef = new BufferedImage[4];
+        spongebob = new BufferedImage[3];
         try {
 
             kitchenSpriteSheet = new SpriteSheet(ImageIO.read(getClass().getResourceAsStream("/Sheets/sprite.png")));
             kitchenCounterSpriteSheet = new SpriteSheet(ImageIO.read(getClass().getResourceAsStream("/Sheets/kitchen_cabinets_by_ayene_chan.png")));
             burgerSpriteSheet = new SpriteSheet(ImageIO.read(getClass().getResourceAsStream("/Sheets/burger.png")));
-            chefSpriteSheet = new SpriteSheet(ImageIO.read(getClass().getResourceAsStream("/Sheets/chef.png")));
+//            chefSpriteSheet = new SpriteSheet(ImageIO.read(getClass().getResourceAsStream("/Sheets/chef.png")));
+            spongebobSpriteSheet = new SpriteSheet(ImageIO.read(getClass().getResourceAsStream("/Sheets/spongebobSprite.png")));
 
 
             title = ImageIO.read(getClass().getResourceAsStream("/Sheets/title.png"));
@@ -101,7 +105,8 @@ public class Images {
             kitchenCounter[6] = kitchenCounterSpriteSheet.crop(0,133,32,50);//plates
             kitchenCounter[7] = kitchenCounterSpriteSheet.crop(0,63,34,56);//buns
             kitchenCounter[8] = kitchenCounterSpriteSheet.crop(32, 203, 34, 44); //onion counter
-
+            kitchenCounter[9] = ImageIO.read(getClass().getResourceAsStream("/Sheets/ColoredCounter.png")); //colored empty counter
+            
             ingredients[0] = burgerSpriteSheet.crop(25, 16, 112, 43); // top bun
             ingredients[1] = burgerSpriteSheet.crop(30, 134, 103, 48); // patty
             ingredients[2] = burgerSpriteSheet.crop(169, 213, 102, 39); // cheese
@@ -111,10 +116,14 @@ public class Images {
             ingredients[6] = burgerSpriteSheet.crop(575, 263, 131, 51); // plate
             ingredients[7] = burgerSpriteSheet.crop(307, 154, 131, 44); //onion
 
-            chef[0] = chefSpriteSheet.crop(30,3,66,120);
-            chef[1] = chefSpriteSheet.crop(159,3,66,120);
-            chef[2] = chefSpriteSheet.crop(287,3,67,120);
-            chef[3] = chefSpriteSheet.crop(31,129,66,120);
+//            chef[0] = chefSpriteSheet.crop(30,3,66,120);
+//            chef[1] = chefSpriteSheet.crop(159,3,66,120);
+//            chef[2] = chefSpriteSheet.crop(287,3,67,120);
+//            chef[3] = chefSpriteSheet.crop(31,129,66,120);
+            
+            spongebob[0] = spongebobSpriteSheet.crop(162,3,37,70);
+            spongebob[1] = spongebobSpriteSheet.crop(12,6,37,70);
+            spongebob[2] = spongebobSpriteSheet.crop(125,8,37,65);
 
             icon =  new ImageIcon(ImageIO.read(getClass().getResourceAsStream("/Sheets/KrustyKrabHat.png")));
 

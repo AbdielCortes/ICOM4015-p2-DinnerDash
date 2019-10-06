@@ -64,24 +64,24 @@ public class Restaurant_1 extends BaseWorld {
 	public void render(Graphics g){
 		g.drawImage(Background,0,0,handler.getWidth(), handler.getHeight(),null);
 		g.drawImage(Images.welcome,5,90,43,82,null);
-		g.drawImage(Images.kitchenChairTable[0],handler.getWidth()/3,90,96,96,null);
-		g.drawImage(Images.kitchenChairTable[1],handler.getWidth()/3+96,140,52,52,null);
-		g.drawImage(Images.kitchenChairTable[1],handler.getWidth()/3-52,140,52,52,null);
+		g.drawImage(Images.kitchenChairTable[0],handler.getWidth()/3,90,110,90,null);
+		g.drawImage(Images.kitchenChairTable[1],handler.getWidth()/3+96,120,52,52,null);
+		g.drawImage(Images.kitchenChairTable[1],handler.getWidth()/3-52,120,52,52,null);
 
 
-		g.drawImage(Images.kitchenChairTable[0],handler.getWidth()/3+handler.getWidth()/6,190,96,96,null);
-		g.drawImage(Images.kitchenChairTable[2],handler.getWidth()/3+handler.getWidth()/6+96,240,52,52,null);
-		g.drawImage(Images.kitchenChairTable[2],handler.getWidth()/3+handler.getWidth()/6-52,240,52,52,null);
+		g.drawImage(Images.kitchenChairTable[0],handler.getWidth()/3+handler.getWidth()/6,190,110,90,null);
+		g.drawImage(Images.kitchenChairTable[2],handler.getWidth()/3+handler.getWidth()/6+96,220,52,52,null);
+		g.drawImage(Images.kitchenChairTable[2],handler.getWidth()/3+handler.getWidth()/6-52,220,52,52,null);
 
-		g.drawImage(Images.kitchenChairTable[0],handler.getWidth()/3+handler.getWidth()/3,90,96,96,null);
-		g.drawImage(Images.kitchenChairTable[1],handler.getWidth()/3+handler.getWidth()/3+96,140,52,52,null);
-		g.drawImage(Images.kitchenChairTable[2],handler.getWidth()/3+handler.getWidth()/3-52,140,52,52,null);
+		g.drawImage(Images.kitchenChairTable[0],handler.getWidth()/3+handler.getWidth()/3,90,110,90,null);
+		g.drawImage(Images.kitchenChairTable[1],handler.getWidth()/3+handler.getWidth()/3+96,120,52,52,null);
+		g.drawImage(Images.kitchenChairTable[2],handler.getWidth()/3+handler.getWidth()/3-52,120,52,52,null);
 
-		g.drawImage(Images.kitchenChairTable[0],handler.getWidth()/3+handler.getWidth()/3,292,96,96,null);
+		g.drawImage(Images.kitchenChairTable[0],handler.getWidth()/3+handler.getWidth()/3,292,110,90,null);
 		g.drawImage(Images.kitchenChairTable[2],handler.getWidth()/3+handler.getWidth()/3+96,312,52,52,null);
 		g.drawImage(Images.kitchenChairTable[1],handler.getWidth()/3+handler.getWidth()/3-52,312,52,52,null);
 
-		g.drawImage(Images.kitchenChairTable[0],handler.getWidth()/3,292,96,96,null);
+		g.drawImage(Images.kitchenChairTable[0],handler.getWidth()/3-3,292,110,90,null);
 		g.drawImage(Images.kitchenChairTable[2],handler.getWidth()/3+96,312,52,52,null);
 		g.drawImage(Images.kitchenChairTable[2],handler.getWidth()/3-52,312,52,52,null);
 
