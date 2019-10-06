@@ -84,14 +84,14 @@ public class Images {
             kitchenChairTable[1] = kitchenSpriteSheet.crop(108,14,30,35);
             kitchenChairTable[2] = kitchenSpriteSheet.crop(108,52,30,35);
 
-            people[0] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Car_Designer3Female.png"));
+            people[0] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Gary.png"));
             people[1] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Doctor2Female.png"));
-            people[2] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Freedom_Fighter2Male.png"));
+            people[2] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Sandy.png"));
             people[3] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Hipster.png"));
             people[4] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Lawyer2Male.png"));
             people[5] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Mad_Scientist3Female.png"));
             people[6] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Programmer2Male.png"));
-            people[7] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Songwriter3Male.png"));
+            people[7] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Patrick.png"));
             people[8] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Weather_Reporter2Female.png"));
             people[9] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/MrKrabs.png")); //inspector
             people[10] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Squidward.png")); //inspector
