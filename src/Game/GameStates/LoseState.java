@@ -49,8 +49,12 @@ public class LoseState extends State {
     @Override
     public void render(Graphics g) {
         g.setColor(Color.darkGray);
-        g.fillRect(0,0,handler.getWidth(),handler.getHeight());
+		g.fillRect(0,0,handler.getWidth(),handler.getHeight());
         g.drawImage(Images.lose,0,0,handler.getWidth(),handler.getHeight(),null);
+        g.setColor(Color.red);
+        g.setFont(new Font("ComicSans", Font.BOLD, 32));
+        g.drawString("Money made: " + handler.getPlayer().money, handler.getWidth()/2, handler.getHeight()/2-300);
+        g.drawString("Clients served: " + handler.getPlayer().servedCustomers, handler.getWidth()/2, handler.getHeight()/2-250);
         uiManager.Render(g);
 
     }

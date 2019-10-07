@@ -11,6 +11,8 @@ import java.awt.image.BufferedImage;
 import java.util.Random;
 
 public class Client extends BaseDynamicEntity {
+	public Color hitbox = Color.red;
+	public boolean isSelected=false;
 	public int patience;
 	public int OGpatience;
 	Order order;
@@ -63,6 +65,12 @@ public class Client extends BaseDynamicEntity {
 		}
 	}
 	public void render(Graphics g){
+		
+		
+		if(isSelected) {
+			g.setColor(hitbox);
+			g.drawRect(xPos, yPos, this.width, this.height);
+		}
 
 		if(!isLeaving){
 			g.drawImage(Images.tint(sprite,1.0f,((float)patience/(float)OGpatience),((float)patience/(float)OGpatience)),xPos,yPos,width,height,null);
