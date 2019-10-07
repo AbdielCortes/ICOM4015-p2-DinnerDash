@@ -11,8 +11,8 @@ import java.awt.image.BufferedImage;
 import java.util.Random;
 
 public class Client extends BaseDynamicEntity {
-	public static int patience;
-	public static int OGpatience;
+	public int patience;
+	public int OGpatience;
 	Order order;
 	public boolean isLeaving = false;
 	public Client(int xPos, int yPos, Handler handler) {
@@ -77,19 +77,19 @@ public class Client extends BaseDynamicEntity {
 
 	}
 
-	public static int getPatience() {
+	public int getPatience() {
 		return patience;
 	}
 
-	public static void setPatience(int patience) {
-		Client.patience = patience;
+	public void setPatience(int patience) {
+		this.patience = patience;
 	}
 
-	public static int getOGpatience() {
+	public int getOGpatience() {
 		return OGpatience;
 	}
 
-	public static void setOGpatience(int OGpatience) {
-		Client.OGpatience = OGpatience;
+	public void setOGpatience(int OGpatience) {
+		this.OGpatience = OGpatience;
 	}
 }

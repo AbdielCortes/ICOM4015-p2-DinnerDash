@@ -147,7 +147,7 @@ public class Player extends BaseDynamicEntity {
 			//System.out.println(cookBonus);
 			money+=client.order.value + cookBonus;
 			//System.out.println(money);
-			if(Client.getPatience() > (Client.getOGpatience()/2)) {
+			if(client.getPatience() > (client.getOGpatience()/2)) {
 				money *= 1.15;
 			}
 			handler.getWorld().clients.remove(client);

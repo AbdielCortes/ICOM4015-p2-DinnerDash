@@ -53,8 +53,8 @@ public class WinState extends State {
         g.drawImage(Images.win,0,0,864,810,null);
     	g.setFont(new Font("TimesNewRoman", Font.PLAIN, 30));
         g.setColor(Color.BLACK);     	
-    	g.drawString(""+Player.getServedCustomers(), 745, 150);
-    	g.drawString(""+Restaurant_1.getLeftClients(), 745, 224);
+    	g.drawString(""+Player.getServedCustomers(), 800, 150);
+    	g.drawString(""+Restaurant_1.getLeftClients(), 800, 224);
 
     	uiManager.Render(g);
     }
