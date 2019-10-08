@@ -21,6 +21,7 @@ public class BaseCounter extends BaseStaticEntity {
     public void interact(){
         if (item != null) {
             handler.getPlayer().getBurger().addIngredient(item);
+            //System.out.println("added ingredient");
         }
     }
     public void tick(){
@@ -29,7 +30,7 @@ public class BaseCounter extends BaseStaticEntity {
 
     public void render(Graphics g){
         g.drawImage(sprite,xPos,yPos,width,height,null);
-        if(isInteractable() && item != null){
+        if(isInteractable() && item != null){ //draws ingredient on top of counter
             g.drawImage(item.sprite,xPos + width/2 - 25,yPos -30,50,30,null);
         }
     }

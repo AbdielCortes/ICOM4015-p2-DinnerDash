@@ -24,6 +24,7 @@ public class Burger extends Food{
     public void addIngredient(Item ingredient){
         this.ingredients.add(ingredient);
         this.sprite.add(ingredient.sprite);
+        //System.out.println("added ingredient object");
     }
     public void finishBurger(){
         this.sprite.add(null);

@@ -14,6 +14,8 @@ public class Client extends BaseDynamicEntity {
 	public double patience;
 	public double OGpatience;
 	public static double patienceModifier = 1;
+	public Color hitbox = Color.red;
+	public boolean isSelected=false;
 	Order order;
 	public boolean isLeaving = false;
 	public Client(int xPos, int yPos, Handler handler) {
@@ -67,11 +69,15 @@ public class Client extends BaseDynamicEntity {
 //			System.out.println("I am Mr Krabs");
 //		}
 //		
-//		if(isAntiV()) {
-//			System.out.println("I am Squidward");
-//		}
+		
 	}
 	public void render(Graphics g){
+		
+		
+		if(isSelected) {
+			g.setColor(hitbox);
+			g.drawRect(xPos, yPos, this.width, this.height);
+		}
 
 		if(!isLeaving){
 			g.drawImage(Images.tint(sprite,1.0f,((float)patience/(float)OGpatience),((float)patience/(float)OGpatience)),xPos,yPos,width,height,null);
@@ -86,26 +92,15 @@ public class Client extends BaseDynamicEntity {
 
 	}
 	
-//	//method used to check if client is an inspector
-//	public boolean isInspector() {
-//		boolean result = false;
-//		for(Client clients : handler.getWorld().clients) {
-//			if(clients.sprite.equals(Images.people[9])) {
-//				result = true;
-//			}
-//		}
-//		return result;
-//	}
-//	
-//	//method used to check if client is an antiV
-//	public boolean isAntiV() {
-//		boolean result = false;
-//		for(Client clients : handler.getWorld().clients) {
-//			if(clients.sprite.equals(Images.people[10])) {
-//				result = true;
-//			}
-//		}
-//		return result;
-//	}
+	//method used to check if client is an inspector
+	public boolean isInspector() {
+		boolean result = false;
+		for(Client clients : handler.getWorld().clients) {
+			if(clients.sprite.equals(Images.people[9])) {
+				result = true;
+			}
+		}
+		return result;
+	}
 
 }
