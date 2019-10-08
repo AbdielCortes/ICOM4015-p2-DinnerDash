@@ -75,25 +75,25 @@ public class Client extends BaseDynamicEntity {
 		isAntiV();
 		eightPercentCounter++;
 		if(eightPercentCounter >= eightPercent) {
-			System.out.println("im in");
+			//System.out.println("im in");
 			eightPercentCounter = 0;
 			int index = new Random().nextInt(2); //generates random number, either 0 or 1
 			if(handler.getWorld().clients.size() > 1) { //if antiV is not alone in restaurant
 				if(antiVIndex != 0 && index == 0) { //if client is not at the back of the line
 					handler.getWorld().clients.get(antiVIndex-1).patience *= 0.96;
-					System.out.println("lowerd patience client behind");
+					//System.out.println("Lowered patience client behind");
 				}
 				else if(antiVIndex != 4 && index == 1) { //if antiV is not at the front of the line
 					handler.getWorld().clients.get(antiVIndex+1).patience *= 0.96;
-					System.out.println("lowerd patience client in front");
+					//System.out.println("Lowered patience client in front");
 				}
 				else if(antiVIndex == 0) { //if antiV is at the back of the line
 					handler.getWorld().clients.get(1).patience *= 0.96;
-					System.out.println("lowerd patience client behind, no rand");
+					//System.out.println("Lowered patience client behind, no rand");
 				}
 				else if(antiVIndex == 4) { //if antiV is at the front of the line
 					handler.getWorld().clients.get(3).patience *= 0.96;
-					System.out.println("lowerd patience client in front, no rand");
+					//System.out.println("Lowered patience client in front, no rand");
 				}
 			}
 		}
@@ -137,7 +137,6 @@ public class Client extends BaseDynamicEntity {
 			if(clients.sprite.equals(Images.people[10])) { //uses sprite to check if a client is squidward sprite
 				eightPercent = clients.OGpatience * 0.8; //gets how many tick is 8% of the patience 
 				antiVIndex = counter; //antiV index is equal to how many times the for loop has run
-				//eightPercentCounter = 0; //resets tick counter
 			}
 			counter++;
 		}
