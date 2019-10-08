@@ -17,7 +17,7 @@ public class Player extends BaseDynamicEntity {
 	public float cookBonus = 0;
 	public int clientsLeft = 0;
 	Item item;
-	float money;
+	public static float money;
 	int speed = 6;
 	private Burger burger;
 	private String direction = "right";
@@ -128,7 +128,9 @@ public class Player extends BaseDynamicEntity {
 					}
 				}
 			}
-		}        
+		}   
+		
+	
 	}
 
 	private void ringCustomer(int x) {
@@ -147,8 +149,17 @@ public class Player extends BaseDynamicEntity {
 			//System.out.println(cookBonus);
 			money+=client.order.value + cookBonus;
 			//System.out.println(money);
-			if(client.getPatience() > (client.getOGpatience()/2)) {
+			if(client.patience > (client.OGpatience/2)) {
 				money *= 1.15;
+			}
+			
+			//if served client is an inspector
+			if(client.sprite.equals(Images.people[9])) {
+				//increases everyones patience by 12%
+				for(Client clients : handler.getWorld().clients) {
+					clients.patience *= 1.12;
+				}
+				Client.patienceModifier = 1.10; //future clients have 10% more patience
 			}
 			handler.getWorld().clients.remove(client);
 			handler.getPlayer().createBurger();
@@ -183,13 +194,17 @@ public class Player extends BaseDynamicEntity {
 			}
 		}
 	}
+		
 	public Burger getBurger(){
 		return this.burger;
 	}
+	
 	public static int getServedCustomers() {
 		return servedCustomers;
 	}
+	
 	public static void setServedCustomers(int srvCustomers) {
 		servedCustomers = srvCustomers;
 	}
+	
 }

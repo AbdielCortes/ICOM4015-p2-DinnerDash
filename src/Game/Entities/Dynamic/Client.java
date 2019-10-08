@@ -11,14 +11,15 @@ import java.awt.image.BufferedImage;
 import java.util.Random;
 
 public class Client extends BaseDynamicEntity {
-	public int patience;
-	public int OGpatience;
+	public double patience;
+	public double OGpatience;
+	public static double patienceModifier = 1;
 	Order order;
 	public boolean isLeaving = false;
 	public Client(int xPos, int yPos, Handler handler) {
 		super(Images.people[new Random().nextInt(11)], xPos, yPos,64,72, handler);
 
-		patience = new Random().nextInt(120*60)+60*60;
+		patience = (new Random().nextInt(120*60)+60*60) * patienceModifier;
 		OGpatience = patience;
 
 		int numOfIngredients = new Random().nextInt(4)+1;
@@ -61,6 +62,14 @@ public class Client extends BaseDynamicEntity {
 		if(patience<=0){
 			isLeaving=true;
 		}
+		
+//		if(isInspector()) {
+//			System.out.println("I am Mr Krabs");
+//		}
+//		
+//		if(isAntiV()) {
+//			System.out.println("I am Squidward");
+//		}
 	}
 	public void render(Graphics g){
 
@@ -76,20 +85,27 @@ public class Client extends BaseDynamicEntity {
 		((Burger) order.food).y+=102;
 
 	}
+	
+//	//method used to check if client is an inspector
+//	public boolean isInspector() {
+//		boolean result = false;
+//		for(Client clients : handler.getWorld().clients) {
+//			if(clients.sprite.equals(Images.people[9])) {
+//				result = true;
+//			}
+//		}
+//		return result;
+//	}
+//	
+//	//method used to check if client is an antiV
+//	public boolean isAntiV() {
+//		boolean result = false;
+//		for(Client clients : handler.getWorld().clients) {
+//			if(clients.sprite.equals(Images.people[10])) {
+//				result = true;
+//			}
+//		}
+//		return result;
+//	}
 
-	public int getPatience() {
-		return patience;
-	}
-
-	public void setPatience(int patience) {
-		this.patience = patience;
-	}
-
-	public int getOGpatience() {
-		return OGpatience;
-	}
-
-	public void setOGpatience(int OGpatience) {
-		this.OGpatience = OGpatience;
-	}
 }

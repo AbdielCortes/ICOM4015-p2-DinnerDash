@@ -94,7 +94,7 @@ public class Images {
             people[7] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Patrick.png"));
             people[8] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Weather_Reporter2Female.png"));
             people[9] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/MrKrabs.png")); //inspector
-            people[10] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Squidward.png")); //inspector
+            people[10] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Squidward.png")); //antiV
 
             kitchenCounter[0] = kitchenCounterSpriteSheet.crop(224,12,32,43);//stoveTop
             kitchenCounter[1] = kitchenCounterSpriteSheet.crop(96,76,32,43);//Vegetables

@@ -34,7 +34,14 @@ public class Restaurant_1 extends BaseWorld {
 				if (client.isLeaving && !left) {
 					toLeave = client;
 					left=true;
-				}else if (left) {
+					
+					//if client that is leaving is an inspector
+					if(client.sprite.equals(Images.people[9])) {
+						Client.patienceModifier = 0.94; //future clients have 6% less patience
+						Player.money /= 2; //player loses half of their money
+					}
+				}
+				else if (left) {
 					toMove.add(client);
 				}
 			}
