@@ -92,6 +92,7 @@ public class GameSetUp implements Runnable {
         gameState = new GameState(handler);
         Player.setServedCustomers(0);
         Restaurant_1.setLeftClients(0);
+        Player.money = 0;
     }
 
     public synchronized void start(){

@@ -40,6 +40,10 @@ public class Restaurant_1 extends BaseWorld {
 						Client.patienceModifier = 0.94; //future clients have 6% less patience
 						Player.money /= 2; //player loses half of their money
 					}
+					
+					if(client.sprite.equals(Images.people[10])) {
+						Client.eightPercent = 1000000;
+					}
 				}
 				else if (left) {
 					toMove.add(client);
