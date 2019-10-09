@@ -25,7 +25,7 @@ public class MusicHandler {
 
     public MusicHandler(Handler handler){
         this.handler = handler;
-        background = getClip(loadAudio("background"));
+        background = getClip(loadAudio("background1"));
     }
 
     private AudioInputStream loadAudio(String url) {
