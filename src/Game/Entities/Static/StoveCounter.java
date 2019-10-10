@@ -41,7 +41,7 @@ public class StoveCounter extends BaseCounter {
             if(timeInStove<burntTime && timeInStove>cookTime){
                 item.sprite = Images.tint(item.sprite,tint,tint,tint);
                 handler.getPlayer().getBurger().addIngredient(item);
-                if(tint>0.30 && tint<0.70) {
+                if(tint>0.48 && tint<0.53) {
                 	handler.getPlayer().bonus=true;
                 } else {
                 	handler.getPlayer().bonus=false;
