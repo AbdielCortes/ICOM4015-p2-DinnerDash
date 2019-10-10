@@ -55,6 +55,10 @@ public class WinState extends State {
         g.setColor(Color.BLACK);     	
     	g.drawString(""+Player.getServedCustomers(), 800, 150);
     	g.drawString(""+Restaurant_1.getLeftClients(), 800, 224);
+    	g.setColor(Color.WHITE);
+    	g.fillRect(handler.getWidth()/2 -230, handler.getHeight()-80, 456, 40);
+    	g.setColor(Color.BLACK);
+    	g.drawString("In Memory of Stephen Hillenburg", handler.getWidth()/2 -220, handler.getHeight()-50);
 
     	uiManager.Render(g);
     }
