@@ -19,6 +19,8 @@ public class Images {
     public static BufferedImage welcome;
     public static BufferedImage Pause;
     public static BufferedImage win;
+    public static BufferedImage plankton;
+    public static BufferedImage instructions;
     public static BufferedImage[] Resume;
     public static BufferedImage[] people;
 //    public static BufferedImage[] chef;
@@ -63,6 +65,8 @@ public class Images {
             welcome = ImageIO.read(getClass().getResourceAsStream("/Sheets/Welcome.png"));
             floor = ImageIO.read(getClass().getResourceAsStream("/Sheets/GreenFloor.png"));
             win = ImageIO.read(getClass().getResourceAsStream("/Sheets/WinScreen.png"));
+            plankton = ImageIO.read(getClass().getResourceAsStream("/Sheets/PlanktonGameOver.png"));
+            instructions = ImageIO.read(getClass().getResourceAsStream("/Sheets/instructions.png"));
             
             butstart[0]= ImageIO.read(getClass().getResourceAsStream("/Buttons/NormalButtonStart.png"));//normbut
             butstart[1]= ImageIO.read(getClass().getResourceAsStream("/Buttons/HoverButtonStart.png"));//hoverbut
@@ -88,7 +92,7 @@ public class Images {
             people[1] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Doctor2Female.png"));
             people[2] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Sandy.png"));
             people[3] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Hipster.png"));
-            people[4] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Lawyer2Male.png"));
+            people[4] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Plankton.png")); //plankton
             people[5] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Mad_Scientist3Female.png"));
             people[6] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Programmer2Male.png"));
             people[7] = ImageIO.read(getClass().getResourceAsStream("/Sheets/People/Patrick.png"));

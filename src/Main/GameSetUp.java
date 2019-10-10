@@ -6,6 +6,7 @@ import Game.GameStates.GameState;
 import Game.GameStates.LoseState;
 import Game.GameStates.MenuState;
 import Game.GameStates.PauseState;
+import Game.GameStates.PlanktonState;
 import Game.GameStates.State;
 import Game.GameStates.WinState;
 import Game.World.Restaurant_1;
@@ -49,6 +50,7 @@ public class GameSetUp implements Runnable {
     public State loseState;
     public State pauseState;
     public State winState;
+    public State planktonState;
 
     //Res.music
     private MusicHandler musicHandler;
@@ -83,6 +85,7 @@ public class GameSetUp implements Runnable {
         menuState = new MenuState(handler);
         pauseState = new PauseState(handler);
         winState = new WinState(handler);
+        planktonState = new PlanktonState(handler);
 
         State.setState(menuState);
         musicHandler.restartBackground();

@@ -11,13 +11,14 @@ import java.util.ArrayList;
 
 public class Restaurant_1 extends BaseWorld {
     private int count=0;
+    private int countInstructions = 0;
     private int capacity = 5;
     public static int leftClients = 0;
     public Restaurant_1(BaseCounter[] Counters, Handler handler) {
         super(Images.floor,Counters, handler, new Player(null,0,650,handler));
     }
 
-	public void tick(){
+	public void tick() {
 		count++;
 		if(count >= 5*60 && !isFull()){
 			count = 0;
@@ -67,6 +68,8 @@ public class Restaurant_1 extends BaseWorld {
 			counter.tick();
 		}
 		handler.getPlayer().tick();
+		
+		countInstructions++;
 	}
 
 	public boolean isFull(){
@@ -95,6 +98,10 @@ public class Restaurant_1 extends BaseWorld {
 		g.drawImage(Images.kitchenChairTable[0],handler.getWidth()/3-3,292,110,90,null);
 		g.drawImage(Images.kitchenChairTable[2],handler.getWidth()/3+96,312,52,52,null);
 		g.drawImage(Images.kitchenChairTable[2],handler.getWidth()/3-52,312,52,52,null);
+		
+		if(countInstructions < 10*60) {
+			g.drawImage(Images.instructions,125,60,handler.getWidth()-250, handler.getHeight()-250,null);
+		}
 
 		for(Client client: clients){
 			client.render(g);

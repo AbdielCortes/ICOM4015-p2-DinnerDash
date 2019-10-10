@@ -46,7 +46,7 @@ public class StoveCounter extends BaseCounter {
                 } else {
                 	handler.getPlayer().bonus=false;
                 }
-                System.out.println(tint);
+                //System.out.println(tint);
                 
                 cooking=false;
                 burnt=false;

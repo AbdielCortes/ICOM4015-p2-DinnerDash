@@ -69,6 +69,10 @@ public class Player extends BaseDynamicEntity {
 		if(this.clientsLeft>=10 || handler.getKeyManager().keyJustPressed(KeyEvent.VK_L)) {
 			State.setState(handler.getGame().loseState);
 		}
+		
+		if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_P)) {
+			State.setState(handler.getGame().planktonState);
+		}
 
 		if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_ESCAPE)) {
 			State.setState(handler.getGame().pauseState);
@@ -136,6 +140,9 @@ public class Player extends BaseDynamicEntity {
 		boolean matched = ((Burger)client.order.food).equals(handler.getCurrentBurger());
 
 		if(matched){
+			if(handler.getWorld().clients.get(customerSelected).sprite.equals(Images.people[4])) {
+				State.setState(handler.getGame().planktonState);
+			}
 			servedCustomers++;
 
 			for(Client clients : handler.getWorld().clients) {
