@@ -6,6 +6,7 @@ import Resources.Images;
 import Display.UI.ClickListlener;
 import Display.UI.UIImageButton;
 import Display.UI.UIManager;
+import Game.World.Restaurant_1;
 
 import java.awt.*;
 
@@ -51,10 +52,12 @@ public class LoseState extends State {
         g.setColor(Color.darkGray);
 		g.fillRect(0,0,handler.getWidth(),handler.getHeight());
         g.drawImage(Images.lose,0,0,handler.getWidth(),handler.getHeight(),null);
-        g.setColor(Color.red);
+        g.setColor(Color.BLACK);
         g.setFont(new Font("ComicSans", Font.BOLD, 32));
-        g.drawString("Money made: " + handler.getPlayer().money, handler.getWidth()/2, handler.getHeight()/2-300);
-        g.drawString("Clients served: " + handler.getPlayer().servedCustomers, handler.getWidth()/2, handler.getHeight()/2-250);
+        String moneyFormated = String.format("%.2f", handler.getPlayer().money);
+        g.drawString("Money made: " + moneyFormated, handler.getWidth()/2, handler.getHeight()/2-350);
+        g.drawString("Clients served: " + handler.getPlayer().servedCustomers, handler.getWidth()/2, handler.getHeight()/2-300);
+        g.drawString("Clients left: " + Restaurant_1.getLeftClients(), handler.getWidth()/2, handler.getHeight()/2-250);
         uiManager.Render(g);
 
     }

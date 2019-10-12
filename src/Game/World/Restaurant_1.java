@@ -51,8 +51,10 @@ public class Restaurant_1 extends BaseWorld {
 				}
 			}
 			if(left){
-    			handler.getPlayer().clientsLeft++;
-    			leftClients++;
+				if(!toLeave.sprite.equals(Images.people[4])) {
+					handler.getPlayer().clientsLeft++;
+					leftClients++;
+				}
 				this.clients.remove(toLeave);
 				for (Client client : toMove) {
 					client.move();

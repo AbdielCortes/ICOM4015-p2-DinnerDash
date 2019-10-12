@@ -140,6 +140,7 @@ public class Player extends BaseDynamicEntity {
 		boolean matched = ((Burger)client.order.food).equals(handler.getCurrentBurger());
 
 		if(matched){
+			//if client is Plankton you the secret formula gets stolen
 			if(handler.getWorld().clients.get(customerSelected).sprite.equals(Images.people[4])) {
 				State.setState(handler.getGame().planktonState);
 			}
@@ -171,6 +172,16 @@ public class Player extends BaseDynamicEntity {
 			handler.getWorld().clients.remove(client);
 			handler.getPlayer().createBurger();
 			//System.out.println("Total money earned is: " + String.valueOf(money));
+			
+			//resolves error where customers go behind the counter
+			if(x != 0) {
+				int i = x-1;
+				while(i >= 0) {
+					handler.getWorld().clients.get(i).moveBackwards();
+					i--;
+				}
+			}
+			
 			return;
 		} 
 

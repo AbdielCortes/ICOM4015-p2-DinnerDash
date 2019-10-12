@@ -25,6 +25,9 @@ public class Client extends BaseDynamicEntity {
 		super(Images.people[new Random().nextInt(11)], xPos, yPos,64,72, handler);
 
 		patience = (new Random().nextInt(120*60)+60*60) * patienceModifier;
+		if(this.sprite.equals(Images.people[4])) {
+			patience = 60*15;
+		}
 		OGpatience = patience;
 
 		int numOfIngredients = new Random().nextInt(4)+1;
@@ -116,6 +119,12 @@ public class Client extends BaseDynamicEntity {
 	public void move(){
 		yPos+=102;
 		((Burger) order.food).y+=102;
+
+	}
+	
+	public void moveBackwards(){
+		yPos-=102;
+		((Burger) order.food).y-=102;
 
 	}
 	
