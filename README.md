@@ -4,18 +4,18 @@ Diner Dash style game where your play as SpongeBob and serve krabby patties to t
 
 <img src="ReadMeImages/title.png" width = 400>
 
-SpongeBob automatically moves from side to side, you press R to add an ingredient to the krabby patty
+SpongeBob automatically moves from side to side; you press R to add an ingredient to the krabby patty
 while you're in front of that counter.
 
 <img src="ReadMeImages/dinnerDash.jpg" width = 400>
 
 Your main objective is to serve customers their orders as fast as possible.
 You get a tip for serving quickly, if ten customers leave, you loose.
-Customers start tu turn red when they become impatient.
+Customers start to turn red when they become impatient.
 
 <img src="ReadMeImages/instructions.png" width = 400>
 
-If you serve plankton a krabby patty he steals the secret formula causing you to loose the game.
+If you serve plankton a krabby patty he steals the secret formula causing you to lose the game.
 
 <img src="ReadMeImages/PlanktonGameOver.png" width = 400>
 
